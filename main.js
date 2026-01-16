@@ -13,7 +13,9 @@ async function fetchUser(users){
         let data = await res.json()
         userRender(data)
         
-        if (!res.ok) throw new Error("Server xatosi");
+        if (!res.ok){
+            console.log("Tizim hayoligi")
+        }
     }catch (error){
         console.log("Hatolik:" + error)
     }finally{
@@ -51,7 +53,9 @@ elUserList.addEventListener("click", (evt) => {
                 let data = await res.json()
                 albomRender(data)
                 
-                if (!res.ok) throw new Error("Server xatosi");
+                if (!res.ok){
+                    console.log("Tizim hayoligi")
+                }
             }catch (error){
                 console.log("Hatolik:" + error)
             }finally{
@@ -87,7 +91,9 @@ elAlbomList.addEventListener("click", (evt) => {
                 let data = await res.json()
                 photoRender(data)
                 
-                if (!res.ok) throw new Error("Server xatosi");
+                if (!res.ok){
+                    console.log("Tizim hayoligi")
+                }
             }catch(error){
                 console.log("Hatolik:" + error)
             }finally{
